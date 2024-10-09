@@ -1,6 +1,4 @@
-Here's a README template for your project with added emojis and a more attractive format:
 
-```markdown
 # 🎓 Student Development Web Application
 
 Welcome to my **Student Development Web Application**! This is my first freelancing project 🚀, designed for college students and faculty to enhance communication and streamline academic processes. Below are the key features of the application:
@@ -35,22 +33,14 @@ Welcome to my **Student Development Web Application**! This is my first freelanc
 - **Database:** MySQL
 
 ## 💻 Installation
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/student-development-web-app.git
-   ```
-2. Navigate to the project directory:  
-   ```bash
-   cd student-development-web-app
-   ```
-3. Install dependencies:  
-   ```bash
-   npm install
-   ```
-4. Start the server:  
-   ```bash
-   node app.js
-   ```
+1. Clone the repository:
+   - `git clone https://github.com/yourusername/student-development-web-app.git`
+2. Navigate to the project directory:
+   - `cd student-development-web-app`
+3. Install dependencies:
+   - `npm install`
+4. Start the application:
+   - `node app.js`
 
 ## 🚀 Usage
 1. Open your browser and go to `http://localhost:8080`.
@@ -64,6 +54,5 @@ For any inquiries or feedback, please reach out at:
 **Email:** tejassunilsurse2004@gmail.com
 
 Thank you for checking out my project! 🌟
-```
 
-You can replace `yourusername` and `your-email@example.com` with your actual GitHub username and email. This format should make your README more engaging and informative!
+---
