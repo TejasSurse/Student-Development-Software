@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Edit Result</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="fa-solid fa-graduation-cap"></i> Student Development</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="/home">Home</a>
+              <a class="nav-link" href="/students">Students</a>
+              <a class="nav-link" href="/results">Results</a>
+              <a class="nav-link" href="/new">Add Student</a>
+              <a class="nav-link" href="/newresult">Add Result</a>
+              <a class="nav-link" href="/addresources">Add Resources</a>
+              <a class="nav-link" href="/notes">Notes</a>
+              <a class="nav-link" href="/books">Books</a>
+              <a class="nav-link" href="/lectures">Lectures</a>
+
+              <a class="logout btn btn-dark" href="/logout">Log out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <div class="container">
+        <h1>Edit Result</h1>
+        <form method="post" action="/results/<%= result.rollno %>?_method=PATCH" class="needs-validation" novalidate>
+            <input type="hidden" name="rollno" value="<%= result.rollno %>">
+            <div class="mb-3">
+                <label for="ds_marks" class="form-label">Data Structures Marks</label>
+                <input type="number" name="ds_marks" class="form-control" value="<%= result.ds_marks %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="cao_marks" class="form-label">Computer Architecture Marks</label>
+                <input type="number" name="cao_marks" class="form-control" value="<%= result.cao_marks %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="programming_marks" class="form-label">Programming Marks</label>
+                <input type="number" name="programming_marks" class="form-control" value="<%= result.programming_marks %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="dms_marks" class="form-label">Discrete Math Marks</label>
+                <input type="number" name="dms_marks" class="form-control" value="<%= result.dms_marks %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="os_marks" class="form-label">Operating Systems Marks</label>
+                <input type="number" name="os_marks" class="form-control" value="<%= result.os_marks %>" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Result</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

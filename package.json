@@ -1,0 +1,22 @@
+{
+  "name": "student-development-application",
+  "version": "1.0.0",
+  "description": "Student development Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "kjsit-student",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.11.3",
+    "nodemon": "^3.1.7"
+  }
+}

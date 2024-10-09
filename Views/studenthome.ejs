@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Home</title>
+    <link rel="stylesheet" href="/styles/style.css"> <!-- Link to CSS file -->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #35424a;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.attendance-box {
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Attendance color coding */
+.attendance-green {
+    background-color: #28a745;
+}
+
+.attendance-red {
+    background-color: #dc3545;
+}
+
+.defaulter-message {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #dc3545;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome, <%= user.name %>!</h1>
+        <nav>
+            <ul>
+                <li><a href="/logout">Logout</a></li>
+                <li><a href="/myresult/<%=user.rollno%>">Results</a></li>
+                <li> <a class="nav-link" href="/notes">Notes</a></li>
+                <li><a class="nav-link" href="/books">Books</a> </li>
+                <li> <a class="nav-link" href="/lectures">Lectures</a></li>
+                <li><a href="/feedbacks/<%=user.rollno%>">Feedbacks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <br><br><br><br><br><br>
+        <section>
+            <h2>Hello <%= user.name %></h2>
+            <p><strong>Roll Number:</strong> <%= user.rollno %></p>
+            <p><strong>Class:</strong> <%= user.class %></p>
+            <p><strong>Department:</strong> <%= user.department %></p>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <p><strong>Phone:</strong> <%= user.phone %></p>
+            <br><br>
+            <div class="student-data">
+                <label>Attendance:</label>
+                <% if (user.attendance >= 75) { %>
+                    <div class="attendance-box attendance-green">
+                        Attendance: <%= user.attendance %>%
+                    </div>
+                <% } else { %>
+                    <div class="attendance-box attendance-red">
+                        Attendance: <%= user.attendance %>%
+                    </div>
+                    <p class="defaulter-message">You are in the defaulters list.</p>
+                <% } %>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    
+</body>
+</html>
